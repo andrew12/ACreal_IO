@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 #include "Node.h"
-#include "SoftPWMRGB.h"
+#include <FastLED.h>
 
 class LedBoard: public Node
 {
@@ -16,14 +16,7 @@ public:
 public:
 
 private:
-    byte ledStatus[18];
-    // Software PWM RGB light
-    SoftPWMRGB LED6;
-    // Values for the software PWM RGB light
-    int valLED6_R;
-    int valLED6_G;
-    int valLED6_B;
+    CRGB leds[6];
 };
 
 #endif
-

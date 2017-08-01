@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define GAMETYPE 1               //0:pop'n with card dispenser 1: pop'n, drummania(1 reader) 2:iidx/ddr sd/gf(2readers) 3:jubeat (1reader+Ledboard) 4: sdvx (1reader+ioboard) 5: ddr hd (2readers + ??? board)
+#define GAMETYPE 3               //0:pop'n with card dispenser 1: pop'n, drummania(1 reader) 2:iidx/ddr sd/gf(2readers) 3:jubeat (1reader+Ledboard) 4: sdvx (1reader+ioboard) 5: ddr hd (2readers + ??? board)
 
 #define RFID_BAUD 115200		//Baud rate for RFID Module
 
@@ -38,29 +38,7 @@
 #define LT_FXR 39
 
 //pins for sdvx/jubeat RGB LEDs (use PWM pins)
-#define LED1_R 7
-#define LED1_G 6
-#define LED1_B 5
-
-#define LED2_R 10
-#define LED2_G 9
-#define LED2_B 8
-
-#define LED3_R 13
-#define LED3_G 12
-#define LED3_B 11
-
-#define LED4_R 4
-#define LED4_G 3
-#define LED4_B 2
-
-#define LED5_R 46
-#define LED5_G 45
-#define LED5_B 44
-
-#define LED6_R A8
-#define LED6_G A9
-#define LED6_B A10
+#define LED1_DATA 7
 //pins for card reader 1 keypad (colls ABC, rows 1234)
 /*
 ### Keypad 3x4 Matrix ###
@@ -87,7 +65,7 @@ COL C  COL B  COL A
 
 
 //pins for card reader 1 RFID Module
-#define R1_DET 20
+#define R1_DET 22
 #define R1_SER Serial1
 
 //pins for card reader 2 keypad (colls ABC, rows 1234)
@@ -105,4 +83,3 @@ COL C  COL B  COL A
 #define R2_SER Serial2
 
 #endif
-
